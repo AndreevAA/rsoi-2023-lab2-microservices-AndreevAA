@@ -38,7 +38,6 @@ jobs:
           user: ${{ secrets.SERVER_USER }}
           pass: ${{ secrets.VM2_PASSWORD }}
           run: |
-            sh run.sh
             cd rsoi-2023-lab2-microservices-AndreevAA
             sudo docker-compose up --build -d
 
