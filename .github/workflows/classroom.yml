@@ -38,7 +38,6 @@ jobs:
           user: ${{ secrets.SERVER_USER }}
           pass: ${{ secrets.VM2_PASSWORD }}
           run: |
-            sh run.sh
             docker rm $(docker stop $(docker ps -a -q --filter ancestor=postgres:13 --format="{{.ID}}"))
             docker stop $(docker ps -q --filter ancestor=rsoi-2023-lab2-microservices-andreevaa-gateway_service )
             cd rsoi-2023-lab2-microservices-AndreevAA
